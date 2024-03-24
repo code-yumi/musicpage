@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'thebold';
+    src: url(thebold.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(55, 0, 91);
+    font-family: 'thebold';
+    user-select: none;
+    box-shadow: inset 0px 0px 20px rgb(255, 0, 242);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    color: white;
+}
+
+h2 {
+    color: white;
+    background-color: rgba(102, 51, 153, 0.63);
+    height: 25px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgb(255, 0, 200);
+    transition: 0.5s;
+    margin-left: 40%;
+    font-weight: 100;
+}
+
+h2:hover {
+    color: deeppink;
+    cursor: default;
+}
+
+li {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    list-style: none;
+    transition: 0.5s;
+}
+
+li:hover {
+    background-color: rgba(255, 0, 200, 0.384);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgb(255, 0, 242);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 10px;
+    margin-left: 50px;
+    height: 600px;
+    width: 400px;
+    border: 2px solid rgb(255, 0, 242);
+    background-image: url(city.gif);
+    background-size: 1050px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(102, 0, 255);
+}
+
+.card {
+    height: 520px;
+    margin-left: 20px;
+    width: 350px;
+    border: 2px solid rgba(255, 46, 210, 0.441);
+    background-color: rgba(137, 43, 226, 0.374);
+    box-shadow: 0px 0px 20px rgb(255, 0, 200);
+    border-radius: 5px;
+}
+
+audio {
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    margin-top: 33px;
+    justify-content: center;
+    color: white;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.543);
+}
+
+@media only screen and (min-width: 360px) and (max-width: 760px) {
+    .container {
+        position: absolute;
+        right: 20px;
+        width: 350px;
+        height: 600px;
+    }
+
+    h1 {
+        margin-right: 40px;
+    }
+
+    .card {
+        position: absolute;
+        width: 310px;
+        top: 70px;
+    }
+
+    audio {
+        width: 250px;
+    }
+
+    footer {
+        position: absolute;
+        top: 700px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .container {
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        width: 80%;
+        height: 600px;
+    }
+
+    .card {
+        position: absolute;
+        width: 550px;
+        top: 50px;
+    }
+
+    footer {
+        position: absolute;
+        top: 850px;
+    }
+}
+
+@media only screen and (min-width: 3840px) and (max-width: 2048px) {
+    .container {
+        position: absolute;
+        top: 20%;
+        right: 25%;
+        width: 60%;
+        height: 600px;
+    }
+
+    .card {
+        position: absolute;
+        width: 550px;
+        top: 50px;
+    }
+
+    footer {
+        position: absolute;
+        top: 1050px;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music</title>
+</head>
+<body>
+    <header>
+        <h1>aproveite</h1>
+    </header>
+    <nav>
+        <div class="container">
+            <h2>Lista</h2>
+            <div class="card">
+                <ul>
+                    <li>Somewhere Only We Know
+                        <div class="player">
+                            <audio class="audioPlayer" controls src="Somewhere Only We Know.mp3"></audio>
+                        </div>
+                    </li>
+                    <li>Daydream
+                        <div class="player">
+                            <audio class="audioPlayer" controls src="Daydream.mp3"></audio>
+                        </div>
+                    </li>
+                    <li>Derniere Danse
+                    <div class="player">
+                        <audio class="audioPlayer" controls src="Derniere Danse.mp3"></audio>
+                    </div>
+                </li>
+                    <li>In this shirt
+                    <div class="player">
+                        <audio class="audioPlayer" controls src="In this shirt.mp3"></audio>
+                    </div>
+                </li>
+                    <li>Runaway
+                    <div class="player">
+                        <audio class="audioPlayer" controls src="Runaway.mp3"></audio>
+                    </div>
+                </li>
+                    <li>Skyfall
+                    <div class="player">
+                        <audio class="audioPlayer" controls src="Skyfall.mp3"></audio>
+                    </div>
+                </li>
+                    <li>Wicked
+                    <div class="player">
+                        <audio class="audioPlayer" controls src="Wicked.mp3"></audio>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <footer>
+            <p>&copy; Todos os direitos reservados - 2024</p>
+        </footer>
+    </section>
+
+    <script>
+        var currentAudio = null;
+
+        function playMusic(audioElement) {
+            if (currentAudio && currentAudio !== audioElement) {
+                currentAudio.pause();
+            }
+            currentAudio = audioElement;
+            audioElement.play();
+        }
+
+        var audioPlayers = document.querySelectorAll('.audioPlayer');
+        audioPlayers.forEach(function(audio) {
+            audio.addEventListener('play', function() {
+                var playingAudio = this;
+                audioPlayers.forEach(function(audio) {
+                    if (audio !== playingAudio) {
+                        audio.pause();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
